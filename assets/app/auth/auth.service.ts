@@ -12,7 +12,7 @@ export class AuthService{
     signUp(user:User){
         const body =JSON.stringify(user)
         const headers=new Headers({'Content-Type':'application/json'});
-        return this.http.post('https://angular4-dev.herokuapp.com/user',body,{headers:headers})
+        return this.http.post('https://angularmessenger-rakib.herokuapp.com/user',body,{headers:headers})
             .map((response:Response)=>response.json())
             .catch((error:Response)=> {
                 this.errorService.handleError(error.json());
@@ -22,7 +22,7 @@ export class AuthService{
     signin(user:User){
         const body =JSON.stringify(user)
         const headers=new Headers({'Content-Type':'application/json'});
-        return this.http.post('https://angular4-dev.herokuapp.com/user/signin',body,{headers:headers})
+        return this.http.post('https://angularmessenger-rakib.herokuapp.com/user/signin',body,{headers:headers})
             .map((response:Response)=>response.json())
             .catch((error:Response)=> {
                 this.errorService.handleError(error.json());
